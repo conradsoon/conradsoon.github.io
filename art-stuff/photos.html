@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 10px;
+      }
+
+      .photo {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .photo img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>buildings with geometry that make my brain go "ooo"</h1>
+      <div class="photo-grid">
+        <!-- Replace the image URLs with the correct relative paths -->
+        <div class="photo">
+          <img src="../img/hdb_photos/diamond.jpeg" alt="Diamond" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/doorway.jpeg" alt="Doorway" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/doorway.jpg" alt="Doorway" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/pillars.jpg" alt="Pillars" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/ravine.jpeg" alt="Ravine" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/stair.jpg" alt="Stair" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/tricolor.jpg" alt="Tricolor" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/tunnel.jpeg" alt="Tunnel" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/v.jpg" alt="V" />
+        </div>
+        <div class="photo">
+          <img src="../img/hdb_photos/window.jpg" alt="Window" />
+        </div>
+        <!-- Add more <div class="photo"> elements for additional images -->
+      </div>
+    </div>
+  </body>
+</html>

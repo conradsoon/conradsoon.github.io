@@ -1,0 +1,476 @@
+/* Self-hosted EB Garamond */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/eb-garamond-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/eb-garamond-latin-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/eb-garamond-latin-400-italic.woff2') format('woff2');
+}
+
+:root {
+  /* Light theme */
+  --primary-bg-color: #ffffff;
+  --primary-text-color: #3d3428;
+  --link-color: #5a4030;
+  --hr-color: #d4cfc4;
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --primary-bg-color: #1a1a1a;
+  --primary-text-color: #e8e4dc;
+  --link-color: #d4a574;
+  --hr-color: #3d3830;
+}
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 0.75rem;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+.container {
+  width: 50%;
+  max-width: 80%;
+  padding: 0;
+  margin: 2em auto;
+  text-align: left;
+}
+
+a {
+  color: var(--link-color);
+}
+
+nav a {
+  margin-right: 1em;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a.disabled {
+  color: #a09080;
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
+hr {
+  border: 1px solid var(--hr-color);
+  width: 100%;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+  nav a {
+    margin-right: 0.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  nav a {
+    margin-right: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  nav a::after {
+    content: " · ";
+    color: var(--primary-text-color);
+    text-decoration: none;
+    display: inline;
+  }
+
+  nav a:last-child::after {
+    content: "";
+  }
+
+  .header {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+    padding: 1em;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
+button {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  border: 2px solid var(--link-color);
+  padding: 2px;
+  font-size: 1rem;
+  width: 2em;
+  height: 2em;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--link-color);
+  color: var(--primary-bg-color);
+}
+
+#nameSpinner {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+#nameSpinner.spin {
+  animation: spin 1s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text animation for rainbow effect */
+@keyframes rainbowText {
+  0% {
+    color: red;
+  }
+  15% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  45% {
+    color: green;
+  }
+  60% {
+    color: blue;
+  }
+  75% {
+    color: indigo;
+  }
+  90% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.funStyle h2,
+.funStyle a {
+  animation: rainbowText 5s linear infinite;
+}
+
+/* State 1: Comic Sans */
+body.funStyle {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* State 2: Background and font color change */
+body.funStyle.state2 {
+  background-color: #ffccff;
+  color: #333;
+}
+
+/* State 3: Random capitalization */
+body.funStyle.state3 p,
+body.funStyle.state3 li {
+  text-transform: none;
+}
+
+/* .funStyle p,
+.funStyle li {
+  text-transform: lowercase;
+}
+.funStyle p::first-letter,
+.funStyle li::first-letter {
+  text-transform: uppercase;
+} */
+
+  
+/* for essays */
+.essay {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.essay h2 {
+  font-size: 2.8em;
+  font-weight: 300;
+  margin: 2em 0 1.5em;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.essay-content {
+  font-size: 1.1em;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.essay-section {
+  margin: 2.5em 0;
+}
+
+.essay p {
+  margin-bottom: 1.4em;
+}
+
+.essay ol {
+  counter-reset: item;
+  list-style: none;
+  margin: 1.5em 0;
+  padding-left: 1em;
+}
+
+.essay ol li {
+  counter-increment: item;
+  margin-bottom: 1em;
+  position: relative;
+  padding-left: 2em;
+}
+
+.essay ol li:before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-weight: 500;
+}
+
+.essay ul {
+  list-style: none;
+  margin: 1.5em 0;
+  padding-left: 1em;
+}
+
+.essay ul li {
+  margin-bottom: 1em;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.essay ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #888;
+}
+
+.essay em, .essay i {
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+.examples li {
+  color: #666;
+  font-style: italic;
+}
+
+.footnotes {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Paper styling */
+.paper {
+  background: #fdfcfa;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 3rem 4rem;
+  margin: 2rem auto;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.05),
+    0 2px 6px rgba(0,0,0,0.05),
+    0 8px 20px rgba(0,0,0,0.06),
+    inset 0 0 60px rgba(139,119,101,0.08);
+  border: 1px solid #d4cfc4;
+  position: relative;
+  font-family: 'EB Garamond', Georgia, serif;
+  color: #3d3428;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(139,119,101,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(139,119,101,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.paper h2 {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-weight: 500;
+  color: #2c2416;
+  margin-bottom: 1rem;
+}
+
+.paper a {
+  color: var(--link-color);
+}
+
+.paper a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+  .paper {
+    padding: 1.5rem 1rem;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+}
+
+/* Dark mode paper */
+[data-theme="dark"] .paper {
+  background: #2a2520;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  border: 1px solid #3d3830;
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.15),
+    0 2px 6px rgba(0,0,0,0.15),
+    0 8px 20px rgba(0,0,0,0.2),
+    inset 0 0 60px rgba(0,0,0,0.15);
+  color: #e8e4dc;
+}
+
+[data-theme="dark"] .paper::before {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255,255,255,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(255,255,255,0.02) 0%, transparent 50%);
+}
+
+[data-theme="dark"] .paper h2 {
+  color: #f0ebe3;
+}
+
+[data-theme="dark"] .paper a {
+  color: var(--link-color);
+}
+
+[data-theme="dark"] .paper a:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .essay-content {
+    color: #d4d4d4;
+  }
+  
+  .essay h2 {
+    color: #ffffff;
+  }
+  
+  .essay ul li:before,
+  .essay ol li:before {
+    color: #999;
+  }
+  
+  .examples li {
+    color: #aaa;
+  }
+  
+  .footnotes {
+    border-top-color: #444;
+    color: #aaa;
+  }
+}
