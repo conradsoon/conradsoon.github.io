@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slouching Towards San Francisco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #111;
+    }
+
+    .og-card {
+      width: 1500px;
+      height: 1500px;
+      background: #faf9f7;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 60px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title {
+      text-align: center;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 64px;
+      font-weight: 400;
+      font-style: italic;
+      color: #000;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-top: 500px;
+      margin-bottom: 120px;
+    }
+
+    .body-text {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 48px;
+      line-height: 1.5;
+      color: #1a1a1a;
+      text-align: left;
+      padding: 0 20px;
+    }
+
+    .drop-cap {
+      float: left;
+      font-size: 120px;
+      line-height: 0.8;
+      padding-right: 12px;
+      padding-top: 8px;
+      font-weight: 400;
+      color: #000;
+    }
+
+    .signature {
+      position: absolute;
+      bottom: 40px;
+      right: 50px;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 42px;
+      color: rgba(0, 0, 0, 0.25);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-card">
+    <img class="bg-image" src="slouchingtowards (1).png" alt="">
+
+    <div class="content">
+      <h1 class="title">[slouching towards san francisco]</h1>
+      <p class="body-text"><span class="drop-cap">"T</span>hese are not the misplaced children of 1967, but children who have always known what they wanted to be. Teenagers who sold companies before they could even drink, fiddlers on the roof who have been coding since they were twelve. The language they speak is a creole. Second-hand references to history, to the classics, coexisting uneasily with mid-level management speak, set in an aspic-jello of American internet pop-culture. Moats and leverages, mottes and baileys. It's so over, we're so back. No one moves to SF without already knowing the lingua franca."</p>
+    </div>
+    <span class="signature">@eigen_moomin</span>
+  </div>
+</body>
+</html>
