@@ -661,81 +661,6 @@ a.postcard:focus-visible {
   object-position: 48% center;
 }
 
-.postcard-keychains {
-  position: relative;
-  display: block;
-  isolation: isolate;
-}
-
-.postcard-keychains img {
-  width: 100%;
-  height: clamp(480px, 48vw, 690px);
-  object-position: center top;
-}
-
-.gopher-caption {
-  display: flex;
-  min-height: 330px;
-  flex-direction: column;
-  gap: 36px;
-  border-top: 1px solid var(--rule-dark);
-  background: var(--paper-bright);
-}
-
-.gopher-manifest {
-  margin-top: auto;
-  padding-top: 17px;
-  border-top: 1px dashed var(--rule-dark);
-  font-family: var(--mono);
-  text-transform: uppercase;
-}
-
-.postcard .gopher-manifest-title {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin: 0;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  line-height: 1.25;
-}
-
-.gopher-manifest dl {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 20px;
-  margin: 22px 0 0;
-}
-
-.gopher-manifest dl > div {
-  min-width: 0;
-}
-
-.gopher-manifest dt {
-  margin-bottom: 5px;
-  color: var(--muted);
-  font-size: 0.5rem;
-  letter-spacing: 0.06em;
-}
-
-.gopher-manifest dd {
-  margin: 0;
-  font-size: 0.61rem;
-  line-height: 1.35;
-}
-
-.postcard .gopher-warning {
-  margin: 22px 0 0;
-  padding: 10px 12px;
-  background: var(--yellow);
-  color: var(--ink);
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.045em;
-  line-height: 1.35;
-}
-
 .route-section {
   min-width: 0;
 }
@@ -1171,12 +1096,6 @@ a.postcard:focus-visible {
 
   .postcard-place img {
     height: min(142vw, 690px);
-  }
-
-  .postcard-keychains img {
-    aspect-ratio: 4 / 3;
-    height: auto;
-    min-height: 0;
   }
 
   .route-scroll {
